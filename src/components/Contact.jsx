@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 
 // ── EmailJS config ──────────────────────────────────────────
@@ -8,13 +8,12 @@ import emailjs from '@emailjs/browser'
 //    {{from_name}}, {{from_email}}, {{subject}}, {{message}}
 //    Set "To Email" in the template to: habiburrahman.easca@gmail.com
 // 4. Copy your Public Key from Account → API Keys
-const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID'
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'
-const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY'
+const EMAILJS_SERVICE_ID  = 'service_g8868xv'
+const EMAILJS_TEMPLATE_ID = 'template_ifvnqdm'
+const EMAILJS_PUBLIC_KEY  = 'WlVBnsKtDgsRqUYjE'
 // ────────────────────────────────────────────────────────────
 
 export default function Contact() {
-  const formRef = useRef(null)
   const [form, setForm]     = useState({ name: '', email: '', subject: '', message: '' })
   const [status, setStatus] = useState('idle') // idle | sending | success | error
 
@@ -25,15 +24,21 @@ export default function Contact() {
     setStatus('sending')
 
     try {
-      await emailjs.sendForm(
+      await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
-        formRef.current,
+        {
+          from_name:  form.name,
+          from_email: form.email,
+          subject:    form.subject,
+          message:    form.message,
+        },
         EMAILJS_PUBLIC_KEY
       )
       setStatus('success')
       setForm({ name: '', email: '', subject: '', message: '' })
-    } catch {
+    } catch (err) {
+      console.error('EmailJS error:', err)
       setStatus('error')
     }
   }
@@ -100,7 +105,7 @@ export default function Contact() {
                 </button>
               </div>
             ) : (
-              <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-5">
                 {[
                   { name: 'name',    placeholder: 'Your Name',  type: 'text'  },
                   { name: 'email',   placeholder: 'Your Email', type: 'email' },
