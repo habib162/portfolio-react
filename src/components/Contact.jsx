@@ -63,8 +63,8 @@ export default function Contact() {
             <ul className="space-y-5">
               {[
                 { label: 'Email',    value: 'habiburrahman.easca@gmail.com' },
-                { label: 'Phone',    value: '01812132131' },
-                { label: 'Location', value: 'Uttara, Dhaka' },
+                { label: 'Phone',    value: '+880 1812 132131' },
+                { label: 'Location', value: 'Sector #10, Uttara, Dhaka' },
               ].map(({ label, value }) => (
                 <li key={label} className="flex items-start gap-4">
                   <span className="text-accent text-xs font-semibold uppercase tracking-widest pt-0.5 w-20 shrink-0">{label}</span>

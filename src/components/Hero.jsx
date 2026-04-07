@@ -49,16 +49,15 @@ export default function Hero() {
 
           {/* Description */}
           <p className="text-white/60 text-base md:text-lg leading-relaxed max-w-lg mb-10">
-            I'm a full-stack web developer with 3.5+ years of experience building
-            robust, scalable applications using PHP Laravel and React. I turn complex
-            requirements into clean, maintainable code that works seamlessly from
-            database to UI.
+            I'm a full-stack web developer with <strong className="text-white">3.5+ years</strong> of experience
+            building robust, scalable applications using <strong className="text-white">PHP Laravel</strong> and <strong className="text-white">React</strong>. I turn complex
+            requirements into clean, maintainable code that works seamlessly from database to UI.
           </p>
 
           {/* CTA buttons */}
           <div className="flex items-center gap-6 flex-wrap">
             <a
-              href="/cv.pdf"
+              href="/MD Habibur Rahman -CV.pdf"
               download
               className="flex items-center gap-2 bg-accent text-dark font-semibold px-6 py-3 text-sm tracking-wide hover:bg-accent/80 transition-colors"
             >
