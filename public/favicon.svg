@@ -1,0 +1,36 @@
+<svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="badge">
+      <rect width="44" height="44"/>
+    </clipPath>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark base -->
+  <rect width="44" height="44" fill="#0B1121"/>
+
+  <!-- Diagonal accent split -->
+  <g clip-path="url(#badge)">
+    <polygon points="0,0 26,0 16,44 0,44" fill="#4DFFA4"/>
+  </g>
+
+  <!-- Divider line -->
+  <g clip-path="url(#badge)">
+    <line x1="26" y1="0" x2="16" y2="44" stroke="white" stroke-width="1" opacity="0.15"/>
+  </g>
+
+  <!-- H left bar -->
+  <rect x="8" y="10" width="5.5" height="24" rx="1.5" fill="#0B1121" filter="url(#glow)"/>
+
+  <!-- H right bar -->
+  <rect x="30.5" y="10" width="5.5" height="24" rx="1.5" fill="#4DFFA4" filter="url(#glow)"/>
+
+  <!-- H crossbar -->
+  <rect x="13.5" y="19.5" width="17" height="5" rx="1.5" fill="white" opacity="0.95"/>
+
+  <!-- Outer border -->
+  <rect x="1" y="1" width="42" height="42" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+</svg>
