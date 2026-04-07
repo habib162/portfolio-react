@@ -6,7 +6,7 @@ A modern, responsive personal portfolio website built with **React** and **Tailw
 
 ## Live Preview
 
-> Coming soon — deploy via [Vercel](https://vercel.com) or [Netlify](https://netlify.com)
+🔗 [https://portfoliome-rust.vercel.app](https://portfoliome-rust.vercel.app)
 
 ---
 
