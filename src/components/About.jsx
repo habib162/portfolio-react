@@ -11,13 +11,48 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 items-center">
 
-          {/* Image placeholder */}
-          <div className="relative">
-            <div className="aspect-[4/5] bg-dark-card border border-white/10 flex items-center justify-center text-white/20 text-sm">
-              [ Profile Photo ]
+          {/* Profile image side */}
+          <div className="relative max-w-md mx-auto md:mx-0">
+
+            {/* Background accent block */}
+            <div className="absolute top-6 left-6 w-full h-full bg-accent/10 border border-accent/20 -z-10" />
+
+            {/* Main image */}
+            <div className="aspect-[4/5] overflow-hidden border-2 border-accent/40">
+              <img
+                src="/habib.jpg"
+                alt="Habib — Web Developer"
+                className="w-full h-full object-cover object-top grayscale-[15%] hover:grayscale-0 transition-all duration-500 hover:scale-105"
+              />
             </div>
-            {/* Accent border decoration */}
-            <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-accent/30 pointer-events-none" />
+
+            {/* Experience badge — bottom left */}
+            <div className="absolute -bottom-5 -left-5 bg-accent text-dark px-5 py-4 shadow-lg">
+              <div className="text-3xl font-black leading-none">3.5+</div>
+              <div className="text-xs font-bold uppercase tracking-widest mt-1">Years Exp.</div>
+            </div>
+
+            {/* Top-right corner accent lines */}
+            <div className="absolute -top-3 -right-3 w-16 h-16 pointer-events-none">
+              <div className="absolute top-0 right-0 w-full h-[2px] bg-accent" />
+              <div className="absolute top-0 right-0 w-[2px] h-full bg-accent" />
+            </div>
+
+            {/* Bottom-right corner accent lines */}
+            <div className="absolute -bottom-3 -right-3 w-16 h-16 pointer-events-none">
+              <div className="absolute bottom-0 right-0 w-full h-[2px] bg-accent/40" />
+              <div className="absolute bottom-0 right-0 w-[2px] h-full bg-accent/40" />
+            </div>
+
+            {/* Floating tech badge — right side */}
+            <div className="absolute -right-6 top-1/2 -translate-y-1/2 bg-[#0B1121] border border-accent/30 px-3 py-3 flex flex-col items-center gap-2 shadow-xl">
+              {['Laravel', 'React', 'PHP'].map(tech => (
+                <span key={tech} className="text-accent text-[10px] font-bold uppercase tracking-widest whitespace-nowrap">
+                  {tech}
+                </span>
+              ))}
+            </div>
+
           </div>
 
           {/* Content */}

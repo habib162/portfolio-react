@@ -85,10 +85,10 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Hamburger */}
+        {/* Hamburger — mobile only */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="w-10 h-10 bg-accent flex items-center justify-center text-dark"
+          className="md:hidden w-10 h-10 bg-accent flex items-center justify-center text-dark"
           aria-label="Toggle menu"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

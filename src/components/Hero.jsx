@@ -87,16 +87,12 @@ export default function Hero() {
 
             {/* Floating image wrapper */}
             <div className="animate-float-shake">
-              {/* Replace src with your actual photo: src="/habib.jpg" */}
-              <div className="w-72 h-72 md:w-96 md:h-96 rounded-full border-4 border-accent overflow-hidden bg-[#0d1422] flex items-center justify-center animate-glow-pulse">
+              <div className="w-72 h-72 md:w-96 md:h-96 rounded-full border-4 border-accent overflow-hidden bg-[#0d1422] animate-glow-pulse">
                 <img
                   src="/habib.jpg"
                   alt="Habib — Web Developer"
-                  className="w-full h-full object-cover"
-                  onError={e => { e.currentTarget.style.display = 'none' }}
+                  className="w-full h-full object-cover object-top"
                 />
-                {/* Fallback initials shown when no image */}
-                <span className="text-7xl font-black animate-gradient-text select-none absolute">H</span>
               </div>
             </div>
 
